@@ -42,6 +42,23 @@
 				"type": "dev",
 				"auth-model": "native"
 			}
+		},
+		"mysql8-17d9a4887f3-56bb5869d9a91cfd": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "myslqdb",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3307",
+				"database": "myslqdb",
+				"url": "jdbc:mysql://localhost:3307/myslqdb",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
 		}
 	},
 	"virtual-models": {

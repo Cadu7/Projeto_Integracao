@@ -1,1 +1,1 @@
-{"resources":{"Scripts/Script.sql":{"sql-editor-data-source-id":"postgres-jdbc-17c3d979048-80ff00039e785d1","default-datasource":"postgres-jdbc-17c3d979048-80ff00039e785d1","default-catalog":"banco"}}}
+{"resources":{"Scripts/Script.sql":{"sql-editor-data-source-id":"mysql8-17c565e7ee2-40d5101d2867e825","default-datasource":"mysql8-17c565e7ee2-40d5101d2867e825","default-catalog":"stock-history-db"}}}

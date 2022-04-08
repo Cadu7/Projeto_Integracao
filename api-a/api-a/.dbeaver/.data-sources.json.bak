@@ -40,8 +40,22 @@
 				"url": "jdbc:mysql://localhost:3306/mysql",
 				"home": "mysql_client",
 				"type": "dev",
-				"auth-model": "native",
-				"handlers": {}
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"postgres-jdbc-17c3d979048-80ff00039e785d1": {
+			"banco": {
+				"public": {
+					":funcionario": {
+						"properties": {
+							"erd.diagram.state": {
+								"serialized": "<diagram version=\"1\" name=\"funcionario\" time=\"202110131431\"><entities><data-source id=\"postgres-jdbc-17c3d979048-80ff00039e785d1\"><entity id=\"1\" name=\"funcionario\" fq-name=\"public.funcionario\" order=\"0\" color-bg=\"124,62,31\" x=\"42\" y=\"23\"><path name=\"public\"/><path name=\"banco\"/></entity></data-source></entities><relations/></diagram>"
+							}
+						}
+					}
+				}
 			}
 		}
 	},
