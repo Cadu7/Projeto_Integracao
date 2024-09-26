@@ -10,50 +10,50 @@ import jakarta.persistence.Id;
 @ApplicationScoped
 public class Funcionario {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String nome;
-	private String password;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String nome;
+    private String password;
 
-	public Funcionario(Long id, String nome, String password) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.password = password;
-	}
+    public Funcionario(Long id, String nome, String password) {
+        super();
+        this.id = id;
+        this.nome = nome;
+        this.password = password;
+    }
 
-	public Funcionario() {
-		super();
-	}
+    public Funcionario() {
+        super();
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	@Override
-	public String toString() {
-		return "{\"nome\":\"" + nome + "\",\"password\": \"" + password + "\"}";
-	}
+    @Override
+    public String toString() {
+        return "{\"nome\":\"" + nome + "\",\"password\": \"" + password + "\"}";
+    }
 
 }

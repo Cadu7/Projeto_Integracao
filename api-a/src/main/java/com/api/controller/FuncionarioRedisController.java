@@ -1,22 +1,14 @@
 package com.api.controller;
 
-import java.util.stream.Stream;
-
-import jakarta.inject.Inject;
-import jakarta.inject.Singleton;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.DELETE;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.PUT;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.core.MediaType;
-
-import org.jboss.resteasy.annotations.jaxrs.PathParam;
-
 import com.api.model.Funcionario;
 import com.api.service.FuncionarioRedisService;
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
+import org.jboss.resteasy.annotations.jaxrs.PathParam;
+
+import java.util.stream.Stream;
 
 @Path("/Redis")
 @Singleton
@@ -24,37 +16,37 @@ import com.api.service.FuncionarioRedisService;
 @Consumes(MediaType.APPLICATION_JSON)
 public class FuncionarioRedisController {
 
-	@Inject
-	private FuncionarioRedisService service;
+    @Inject
+    private FuncionarioRedisService service;
 
-	// this is not working
-	@GET
-	public Stream<Object> keys() {
-		return service.keys();
-	}
+    // this is not working
+    @GET
+    public Stream<Object> keys() {
+        return service.keys();
+    }
 
-	@GET
-	@Path("/{key}")
-	public String get(@PathParam String key) {
-		return service.get(key);
-	}
+    @GET
+    @Path("/{key}")
+    public String get(@PathParam String key) {
+        return service.get(key);
+    }
 
-	@POST
-	@Path("/{key}")
-	public void create(@PathParam String key, Funcionario func) {
-		service.set_update(key, func);
-	}
+    @POST
+    @Path("/{key}")
+    public void create(@PathParam String key, Funcionario func) {
+        service.set_update(key, func);
+    }
 
-	@PUT
-	@Path("/{key}")
-	public void increment(@PathParam String key, Funcionario func) {
-		service.set_update(key, func);
-	}
+    @PUT
+    @Path("/{key}")
+    public void increment(@PathParam String key, Funcionario func) {
+        service.set_update(key, func);
+    }
 
-	@DELETE
-	@Path("/{key}")
-	public void delete(@PathParam String key) {
-		service.del(key);
-	}
+    @DELETE
+    @Path("/{key}")
+    public void delete(@PathParam String key) {
+        service.del(key);
+    }
 
 }
