@@ -1,11 +1,9 @@
 package com.quarkus.repository;
 
-import javax.enterprise.context.ApplicationScoped;
-
 import com.quarkus.model.Cliente;
-
 import io.quarkus.mongodb.panache.PanacheMongoRepository;
+import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class ClienteRepository implements PanacheMongoRepository<Cliente>{
+public class ClienteRepository implements PanacheMongoRepository<Cliente> {
 }
